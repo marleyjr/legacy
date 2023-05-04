@@ -1,5 +1,5 @@
 <?php
-
+//
 require 'config.php';
 require $_SERVER['DOCUMENT_ROOT'].'/classes/Session.class.php';
 require $_SERVER['DOCUMENT_ROOT'].'/classes/System.class.php';
