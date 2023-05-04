@@ -139,7 +139,7 @@ ul {
 
 <center>
 <?php echo sprintf(_('This Term of Service was first published on %s and last revised on %s.'), '30/08/2014', '27/09/2014'); ?>
-
+<!-- -->
 </center>
 <br/>
 </body>
