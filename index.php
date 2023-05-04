@@ -189,7 +189,7 @@ if(!isset($_SESSION['id'])){
         //não está fazendo nenhum tipo de social login, vou verificar se está logado no banco (remember me)
         require $_SERVER['DOCUMENT_ROOT'].'/classes/RememberMe.class.php';
         
-        $key = pack("H*", 'hegame123');
+        $key = pack("H*", '2133');
         
         
         $remember = new RememberMe($key, PDO_DB::factory());
