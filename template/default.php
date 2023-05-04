@@ -27,8 +27,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
 
 textdomain($domain);
 
-require_once 'twitter/twitteroauth.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/classes/Facebook.class.php';
+
 
 switch($fbServerURL){
     case 'http://hackerexperience.com/':
@@ -46,19 +45,19 @@ switch($fbServerURL){
 }
 
 
-$facebook = new Facebook(array(
-    'appId' => $appID,
-    'secret' => $appSecret,
-    'cookie' => true
-));
+// $facebook = new Facebook(array(
+//     'appId' => $appID,
+//     'secret' => $appSecret,
+//     'cookie' => true
+// ));
 
-$facebookURL = $facebook->getLoginUrl(Array(
-    'scope' => 'email',
-    'redirect_uri' => $fbServerURL
-));
+// $facebookURL = $facebook->getLoginUrl(Array(
+//     'scope' => 'email',
+//     'redirect_uri' => $fbServerURL
+// ));
 
-$twitteroauth = new TwitterOAuth('hegame123', 'hegame123');
-$twitteroauth->host = "https://api.twitter.com/1.1/";
+// $twitteroauth = new TwitterOAuth('hegame123', 'hegame123');
+// $twitteroauth->host = "https://api.twitter.com/1.1/";
 
 //if($_SERVER['HTTP_HOST'] == 'www.hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'hackerexperience.com'){
 //    $url = 'http://hackerexperience.com/';
@@ -67,26 +66,26 @@ $twitteroauth->host = "https://api.twitter.com/1.1/";
 //}
 $url = 'http://hackerexperience.com/';
 
-$request_token = $twitteroauth->getRequestToken($url);
+// $request_token = $twitteroauth->getRequestToken($url);
 
-$twitterURL = '';
+// $twitterURL = '';
 
-if($request_token){
+// if($request_token){
 
-    $_SESSION['oauth_token'] = $request_token['oauth_token'];
-    $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
+//     $_SESSION['oauth_token'] = $request_token['oauth_token'];
+//     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
 
-    if($twitteroauth->http_code==200){
-        $twitterURL = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
-    } else {
+//     if($twitteroauth->http_code==200){
+//         $twitterURL = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
+//     } else {
         
-        //TODO: report
-    }
+//         //TODO: report
+//     }
 
-} elseif($url == 'http://hackerexperience.com/'){
-    //echo 'Error while connecting to twitter';
-    //TODO: report instead of echo
-}
+// } elseif($url == 'http://hackerexperience.com/'){
+//     //echo 'Error while connecting to twitter';
+//     //TODO: report instead of echo
+// }
 
 $script = $msgRegister = $msgLogin = $msgIndex = FALSE;
 
