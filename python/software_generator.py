@@ -145,7 +145,7 @@ def add(npcID, softInfo):
 						)
 
 	except:
-		print 'ROLLBACK'
+		print('ROLLBACK')
 		db.rollback()
 
 	db.commit()
@@ -175,7 +175,7 @@ def infoByExt(softInfo):
 		  	size = dict_size['4'][str(softInfo['version'])]
 		  	ram = dict_ram['4'][str(softInfo['version'])]
 
-  	else:
+	else:
   		size = 0
   		ram = 0
 

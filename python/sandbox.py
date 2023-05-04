@@ -1,14 +1,14 @@
-# import gettext
+import gettext
 
-# gettext.bindtextdomain('messages', '/var/www/worldofhackers.eu/locale')
-# gettext.textdomain('messages')
+gettext.bindtextdomain('messages', '/var/www/worldofhackers.eu/locale')
+gettext.textdomain('messages')
 
-# t = gettext.translation('pt', '/var/www/worldofhackers.eu/locale', fallback=True)
+t = gettext.translation('pt', '/var/www/worldofhackers.eu/locale', fallback=True)
 
-# _ = t.ugettext
+_ = t.gettext
 # # ...
-# print _('Missing fields.')
+print('Missing fields.')
 
 
 
-print _('Task Managerr')
+print(('Task Managerr'))

@@ -4,7 +4,7 @@ def add(total):
 
 	queryToAdd = total
 
-	print "adding "+str(total)
+	print("adding "+str(total))
 
 	f = open('/var/www/worldofhackers.eu/status/queries.txt', 'r+')
 

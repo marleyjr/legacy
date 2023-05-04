@@ -179,4 +179,4 @@ if __name__ == "__main__":
 
 		adiciona_badge(69, userID)
 
-print time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s\n"
+print(time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s\n")

@@ -166,7 +166,7 @@ def infoByExt(softType, softVersion):
 		  	size = dict_size['4'][str(softVersion)]
 		  	ram = dict_ram['4'][str(softVersion)]
 
-  	else:
+	else:
   		size = 0
   		ram = 0
 
@@ -195,7 +195,7 @@ def getNPCID(puzzleID):
 	for npcID in cur.fetchall():
 		return str(npcID[0])
 		
-	print 'SEM ID!!! ERRO???'
+	print('SEM ID!!! ERRO???')
 
 	return False
 

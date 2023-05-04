@@ -238,7 +238,7 @@ for login, premium, clanID, clanName, clanTag, clanOwner, ranking, gameAge, repu
                         </ul>\n\
                         '
 
-    	friendsHTML += '<div class="center">'
+	friendsHTML += '<div class="center">'
 
 	if totalFriends > 5:
 		friendsHTML += '<a href="profile?id='+userID+'&view=friends" class="btn btn-inverse">View all</a>&nbsp;&nbsp;'

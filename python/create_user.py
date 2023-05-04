@@ -112,7 +112,7 @@ try:
 except:
 
 	if cur:
-		print "LOG-ME: Rolling back create_user "+user+" using "+email
+		print("LOG-ME: Rolling back create_user "+user+" using "+email)
 		db.rollback()
 
 finally:
