@@ -130,9 +130,8 @@ class Player {
     
     public function verifyID($uid){
 
-        if(is_int($uid) || ctype_digit($uid)){
-
-            if(isset($_SESSION['id'])){            
+        if (!empty($id) && ctype_digit($id)) {
+           if(isset($_SESSION['id'])){            
                 if($uid == $_SESSION['id']) return true;
             }
             
@@ -142,9 +141,9 @@ class Player {
 
             if ($total == '1') {
                 return TRUE;
-            } else {
-                return FALSE;
-            }
+        } else {
+           return FALSE;
+        }
 
         }
 

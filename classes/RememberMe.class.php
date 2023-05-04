@@ -167,20 +167,18 @@ class RememberMe {
             require_once $_SERVER['DOCUMENT_ROOT'].'/classes/Player.class.php';
             $player = new Player();
 
-            if($player->verifyID($data['user'])){
-                
+            if (isset($data['user']) && ctype_digit($data['user']) && $player->verifyID($data['user'])) {
                 $redirect = 'index';
-                if(array_key_exists('GOING_ON', $_SESSION)){
+                if (array_key_exists('GOING_ON', $_SESSION)) {
                     $redirect = $_SESSION['GOING_ON'];
                     unset($_SESSION['GOING_ON']);
                 }
-                
+
                 $username = $player->getPlayerInfo($data['user'])->login;
                 $database->login($username, '', 'remember');
-                                
-                header("Location:".$redirect);
+
+                header("Location:" . $redirect);
                 exit();
-                
             }
 
         } elseif($data == -1){ //invalid or tampered cookie.
