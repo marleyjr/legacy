@@ -22,7 +22,7 @@ for userID in cur.fetchall():
 	userID = userID[0]
 
 	try: 
-		os.remove($_SERVER['DOCUMENT_ROOT'].'/html/profile/'+str(userID)+'.html')
+		os.remove('/html/profile/'+str(userID)+'.html')
 	except:
 		pass
 
@@ -34,4 +34,4 @@ for userID in cur.fetchall():
 
 db.commit()
 
-print time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s"
+print(time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s")

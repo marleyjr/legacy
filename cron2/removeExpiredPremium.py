@@ -19,7 +19,7 @@ for userID, bought, premium, paid in cur.fetchall():
 	if not imported:
 
 		imported = True
-		sys.path.insert(0, $_SERVER['DOCUMENT_ROOT'].'/python')
+		sys.path.insert(0, '/python')
 		import badge_add
 
 	badge_add.userBadge = 'user'
@@ -45,4 +45,4 @@ for userID, bought, premium, paid in cur.fetchall():
 
 db.commit()
 
-print time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s"
+print(time.strftime("%d/%m/%y %H:%M:%S"),' - ',__file__,' - ',round(time.time() - start_time, 4), "s")
